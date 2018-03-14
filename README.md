@@ -1,6 +1,9 @@
 k8s-on-openstack
 ================
 
+NOTE TOF: this was zioproto's fork of a k8s deployment automation. Didn't work for us on Ned.
+
+
 An opinionated way to deploy a Kubernetes cluster on top of an OpenStack cloud.
 
 It is based on the following tools:
@@ -65,3 +68,15 @@ References
   * https://kubernetes.io/docs/getting-started-guides/kubeadm/
   * https://www.weave.works/docs/net/latest/kube-addon/
   * https://github.com/kubernetes/dashboard#kubernetes-dashboard
+  
+Notes TOF
+------------
+
+In order to get it running had to update a few things.
+To prevent it from redeploying each time you have to provide an inventory file to ansible:
+
+
+		ansible-playbook -i hosts.ned.inventory site.yaml
+		
+
+ 
